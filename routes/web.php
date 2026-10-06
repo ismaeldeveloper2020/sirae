@@ -18,20 +18,13 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('/borrar-cache', function () {
 
+Route::get('/clear-cache', function () {
     Artisan::call('optimize:clear');
-
-    
-    //Artisan::call('view:clear');
-    //Artisan::call('config:clear');
-    //Artisan::call('cache:clear');
-
     return response()->json([
-        'ok' => true,
-        'mensaje' => 'Cache limpiada correctamente'
+        'message' => 'Cachés limpiadas correctamente',
+        'output' => Artisan::output(),
     ]);
-
 });
 
 Route::get('/livewire/livewire.js.map', function () {
