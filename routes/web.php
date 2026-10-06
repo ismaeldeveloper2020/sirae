@@ -140,6 +140,10 @@ Route::middleware([
         return view('admin.roles');
     })->name('admin.roles');
 
+    Route::get('/admin/roles/nuevo', function () {
+        return view('admin.roles');
+    })->name('admin.roles.nuevo');
+
     Route::get('/admin/organizaciones', function () {
         return view('admin.organizaciones');
     })->name('admin.organizaciones');
