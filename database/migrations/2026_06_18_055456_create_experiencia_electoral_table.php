@@ -28,6 +28,6 @@ $table->unsignedBigInteger('id_periodo_ee')->nullable();
 }
 public function down(): void
 {
-Schema::dropIfExists('pad_experiencias_electoral');
+Schema::dropIfExists('padron_curriculum_experiencias_electorales');
 }
 };

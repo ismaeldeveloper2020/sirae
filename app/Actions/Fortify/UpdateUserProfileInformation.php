@@ -17,6 +17,9 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
      */
     public function update(User $user, array $input): void
     {
+        // Jetstream envía "name"; SIRAE almacena el nombre en "nombre".
+        $input['nombre'] = $input['name'] ?? $input['nombre'] ?? null;
+
         Validator::make($input, [
             'nombre' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],

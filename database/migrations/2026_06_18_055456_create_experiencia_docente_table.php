@@ -24,6 +24,6 @@ public function up(): void
 }
 public function down(): void
 {
-Schema::dropIfExists('pad_experiencias_docente');
+Schema::dropIfExists('padron_curriculum_experiencias_docentes');
 }
 };
