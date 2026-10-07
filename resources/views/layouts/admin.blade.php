@@ -57,8 +57,8 @@
     <link rel="stylesheet" href="{{ asset('adminlte4/css/adminlte.css') }}">
     <!--end::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous">
-    <link href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css" rel="stylesheet" integrity="sha384-A3od1iroH5dfODhbBSEOyHUQv+mVRcDXJL4XToPrjsqOofphRr+Cl3PvBcQ1QCC3" crossorigin="anonymous">
-    <link href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.bootstrap5.min.css" rel="stylesheet" integrity="sha384-seyUnB//1QOFEqox9uI7YTLBgz9jBwFRqZvsEPFrTw6NAsFEo70nhBWsQfODqiYA" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/datatables.net-bs5@3.1.3/css/dataTables.bootstrap5.min.css" rel="stylesheet" integrity="sha384-OZKa6QSlaaq/LGR1sBFkYhC0c/nacIFh1chsblhDUxggC9Zb0XLEEMs95i1Kydnt" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/datatables.net-responsive-bs5@4.1.1/css/responsive.bootstrap5.min.css" rel="stylesheet" integrity="sha384-IccFVZxMebKzou2YAT+5kHCpRTtvbJKtU1WS6PmGGeO3LvfGhMNgmeDE5k59j9Qk" crossorigin="anonymous">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" integrity="sha384-OXVF05DQEe311p6ohU11NwlnX08FzMCsyoXzGOaL+83dKAb3qS17yZJxESl8YrJQ" crossorigin="anonymous">
 
@@ -536,11 +536,11 @@ crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" integrity="sha384-d3UHjPdzJkZuk5H3qKYMLRyWLAQBJbby2yr2Q58hXXtAGF8RSNO9jpLDlKKPv5v3" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.25/dist/sweetalert2.all.min.js" integrity="sha384-nLoOnA/BDh8A/jxqtckg4DumuCGOBYUnNJLZdQz/zfYNp3wcjGSoWTAzgko06G/2" crossorigin="anonymous"></script>
 <!-- DataTables -->
- <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js" integrity="sha384-nJy9D0UBD2LV93ED7IXSsdWfa9PumZvn70zRSR/oFw5Zq0x6gWwWdpLeGsbVATVg" crossorigin="anonymous"></script>
- <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js" integrity="sha384-ks7+ewhGLKJbkT2/4rC58iNvYS4s9PE4sQpF/sT8V6to+uomItbPi3PHIZN7naMV" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/datatables.net@3.1.3/js/dataTables.min.js" integrity="sha384-2VkhZZqhleNsGIa6GcWWRJn09k3lpejTs0B2LzDbeU/YSNfr6nKAnRTgasXvxWc3" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5@3.1.3/js/dataTables.bootstrap5.min.js" integrity="sha384-4d8X9sr6Gnv9AgIQn6bv3lmQxj5fD+9bVAun0/XMmdy7oPRvT0adfiUUiiYpi4Ck" crossorigin="anonymous"></script>
 <!-- Responsive -->
- <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js" integrity="sha384-qEa+gLeZqlM4MkIP5DOnREMSFFhbLu5+8SDh56fRGErssuPwLefhyOE3uf4KcVEZ" crossorigin="anonymous"></script>
- <script src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.bootstrap5.min.js" integrity="sha384-kg2n/a10bBsRCaIeUrjwzhJm6/RSujqXCxCzZqZp4XEDYaiElhtrW9SoMWNNQ+v3" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/datatables.net-responsive@4.1.1/js/dataTables.responsive.min.js" integrity="sha384-PQkuArYpt1S0q5TqF/LnSkmadKwFyLBnPgdKgxfzpZy+h8UOk/jF3895MC6ZbHof" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/datatables.net-responsive-bs5@4.1.1/js/responsive.bootstrap5.min.js" integrity="sha384-knw38sH7qpV3KrjATT6pxZQbU/X2YxbvSTFx8RSBVmc5KndzK7iStdfQiNUs0nnd" crossorigin="anonymous"></script>
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
       const Default = {

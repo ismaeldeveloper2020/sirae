@@ -32,6 +32,6 @@ Schema::create('padron_curriculum_datos_academicos', function (Blueprint $table)
 }
 public function down(): void
 {
-Schema::dropIfExists('pad_datos_academicos');
+Schema::dropIfExists('padron_curriculum_datos_academicos');
 }
 };

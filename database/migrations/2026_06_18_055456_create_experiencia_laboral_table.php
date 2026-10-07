@@ -29,6 +29,6 @@ Schema::create('padron_curriculum_experiencias_laborales', function(Blueprint $t
 }
 public function down(): void
 {
-Schema::dropIfExists('pad_experiencias_laboral');
+Schema::dropIfExists('padron_curriculum_experiencias_laborales');
 }
 };

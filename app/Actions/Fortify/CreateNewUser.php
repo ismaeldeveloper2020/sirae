@@ -23,11 +23,7 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input): User
     {
         // Validar periodo de registro
-        $config = Configuraciones::whereHas('proceso', function($q){
-            $q->where('nombre', 'REGISTRO');
-        })
-        ->where('activo',1)
-        ->first();
+        $config = Configuraciones::registroActivo();
 
         if(!$config){
 

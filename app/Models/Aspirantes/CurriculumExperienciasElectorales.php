@@ -16,6 +16,7 @@ class CurriculumExperienciasElectorales extends Model
         'descripcion_otro_cargo_ee',
         'id_institucion_ee',
         'descripcion_otro_institucion_ee',
+        'id_periodo_ee',
         'periodo_ee',
         'id_usuario_creo',
         'id_usuario_modifico',

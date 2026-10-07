@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
@@ -65,7 +66,24 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $appends = [
         'profile_photo_url',
+        'name',
     ];
+
+    /**
+     * Nombre compatible con Jetstream y las vistas heredadas.
+     * La tabla users conserva nombre, apaterno y amaterno como columnas reales.
+     */
+    protected function name(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value, array $attributes) => trim(implode(' ', array_filter([
+                $attributes['nombre'] ?? null,
+                $attributes['apaterno'] ?? null,
+                $attributes['amaterno'] ?? null,
+            ]))),
+            set: fn (?string $value) => ['nombre' => $value],
+        );
+    }
 
     /**
      * Get the attributes that should be cast.

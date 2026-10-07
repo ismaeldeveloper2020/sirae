@@ -1,11 +1,7 @@
 @php
     use App\Models\Configuraciones;
     use Carbon\Carbon;
-    $configRegistro = Configuraciones::whereHas('proceso', function($q){
-            $q->where('nombre','REGISTRO');
-        })
-        ->where('activo',1)
-        ->first();
+    $configRegistro = Configuraciones::registroActivo();
     $registroActivo = false;
     $estadoRegistro = '';
     $mensajeRegistro = '';

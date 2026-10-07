@@ -12,13 +12,7 @@ class ValidarPeriodoRegistro
     public function handle(Request $request, Closure $next)
     {
 
-        $config = Configuraciones::whereHas('proceso', function($q){
-
-            $q->where('nombre','REGISTRO');
-
-        })
-        ->where('activo',1)
-        ->first();
+        $config = Configuraciones::registroActivo();
 
 
         if(!$config){

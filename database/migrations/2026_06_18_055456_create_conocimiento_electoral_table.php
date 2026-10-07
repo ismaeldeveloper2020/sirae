@@ -31,6 +31,6 @@ Schema::create('padron_curriculum_conocimientos_electorales', function (Blueprin
 }
 public function down(): void
 {
-Schema::dropIfExists('pad_conocimientos_electoral');
+Schema::dropIfExists('padron_curriculum_conocimientos_electorales');
 }
 };
