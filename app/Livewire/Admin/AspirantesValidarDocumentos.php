@@ -37,7 +37,8 @@ class AspirantesValidarDocumentos extends Component
     }
     public function render()
     {
-        $user = User::with('documentos')
+        $user = User::role('Aspirante')
+            ->with('documentos')
             ->select(
                 'users.*',
                 'padron_generales.folio',
@@ -51,7 +52,7 @@ class AspirantesValidarDocumentos extends Component
                 'users.id'
             )
             ->where('users.id', $this->user_id)
-            ->first();
+            ->firstOrFail();
         return view('livewire.admin.aspirantes-validar-documentos', [
             'user' => $user
         ]);
