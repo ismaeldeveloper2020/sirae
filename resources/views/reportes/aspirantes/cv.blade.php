@@ -457,9 +457,9 @@
                     {{$a->nivel_estudio}}
                 </td>
                 <td>
-                    {{$a->id_carrera==9
+                    {{filled($a->otra_carrera)
                     ? $a->otra_carrera
-                    : $a->carrera}}
+                    : ($a->carrera ?? '')}}
                 </td>
                 <td>
                     {{$a->estatus_nivel_estudio}}
@@ -553,23 +553,19 @@
 
             <tr>
                 <td>
-                    {{
-                        $e->id_cargo_ee == 24
+                    {{filled($e->descripcion_otro_cargo_ee)
                         ? $e->descripcion_otro_cargo_ee
-                        : $e->cargo_ocupado
-                    }}
+                        : ($e->cargo_ocupado ?? '')}}
                 </td>
 
                 <td>
-                    {{
-                        $e->id_institucion_ee == 9
+                    {{filled($e->descripcion_otro_institucion_ee)
                         ? $e->descripcion_otro_institucion_ee
-                        : $e->instituto
-                    }}
+                        : ($e->instituto ?? '')}}
                 </td>
 
                 <td>
-                    {{ $e->periodo_ee }}
+                    {{ filled($e->periodo_ee ?? null) ? $e->periodo_ee : ($e->periodo ?? '') }}
                 </td>
             </tr>
 
@@ -619,7 +615,7 @@
         <table class="tabla">
             <tr>
                 <th>
-                    Descrición
+                    Descripción
                 </th>
             </tr>
             @foreach($pad_trayectorias as $t)

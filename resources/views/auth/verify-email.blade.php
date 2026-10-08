@@ -85,7 +85,7 @@
                         <div class="col-lg-5">
                             <div class="left-panel h-100">
                                 <div class="logo-circle">
-                                    <i class="fas fa-envelope-circle-check"></i>
+                                    <i class="fa-solid fa-envelope-circle-check"></i>
                                 </div>
                                 <h2 class="fw-bold">
                                     {{ config('app.name') }}
@@ -95,7 +95,7 @@
                                 </p>
                                 <hr>
                                 <p style="text-align:justify">
-                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fa-solid fa-circle-check"></i>
                                     Para proteger tu cuenta necesitamos confirmar tu correo electrónico.
                                     Revisa tu bandeja de entrada y da clic en el enlace de activación
                                     que enviamos.
@@ -114,7 +114,7 @@
                                 </div>
                                 @if (session('status') == 'verification-link-sent')
                                 <div class="alert alert-success">
-                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fa-solid fa-circle-check"></i>
                                     Se envió un nuevo enlace de verificación a tu correo.
                                 </div>
                                 @endif
@@ -122,7 +122,7 @@
                                     @csrf
                                     <div class="d-grid mb-3">
                                         <button type="submit" class="btn btn-main">
-                                            <i class="fas fa-paper-plane"></i>
+                                            <i class="fa-solid fa-paper-plane"></i>
                                             Reenviar correo de activación
                                         </button>
                                     </div>
@@ -131,14 +131,14 @@
                                     {{--
                                 <a href="{{ route('profile.show') }}"
                                     class="btn btn-outline-primary btn-outline">
-                                    <i class="fas fa-user"></i>
+                                    <i class="fa-solid fa-user"></i>
                                     Editar perfil
                                     </a>
                                     --}}
                                     <form method="POST" action="{{ route('logout') }}" class="d-inline">
                                         @csrf
                                         <button type="submit" class="btn btn-outline-danger btn-outline ms-2">
-                                            <i class="fas fa-right-from-bracket"></i>
+                                            <i class="fa-solid fa-right-from-bracket"></i>
                                             Cerrar sesión
                                         </button>
                                     </form>

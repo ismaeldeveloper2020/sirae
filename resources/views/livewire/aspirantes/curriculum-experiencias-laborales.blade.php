@@ -67,7 +67,7 @@
 
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_giro_el') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Giro de la institución o empresa
             </label>
             <select id="id_giro_el" class="form-select select2" data-model="id_giro_el" wire:ignore>
@@ -85,7 +85,7 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Institución o empresa
             </label>
             <input id="institucion_el" type="text" class="form-control 
@@ -98,7 +98,7 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Puesto o cargo
             </label>
             <input id="puesto_el" type="text" class="form-control 
@@ -111,7 +111,7 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Período (ejemplo: 2018-2020)
             </label>
             <input id="periodo_el" type="text" class="form-control 
@@ -126,7 +126,7 @@
     <div class="d-flex justify-content-between align-items-center mt-4">
         <a href="{{route('dashboard')}}"
         class="btn btn-outline-secondary btn-md px-3 rounded-2">
-            <i class="fa fa-arrow-left me-1"></i>
+            <i class="fa-solid fa-arrow-left me-1"></i>
             Volver
         </a>
         <button 
@@ -137,12 +137,12 @@
             wire:target="storeExperienciaLaboral">
 
             <span wire:loading.remove wire:target="storeExperienciaLaboral">
-                <i class="fa fa-save me-1"></i>
+                <i class="fa-solid fa-floppy-disk me-1"></i>
                 Guardar
             </span>
 
             <span wire:loading wire:target="storeExperienciaLaboral">
-                <i class="fa fa-spinner fa-spin me-1"></i>
+                <i class="fa-solid fa-spinner fa-spin me-1"></i>
                 Guardando
             </span>
         </button>
@@ -181,13 +181,13 @@
                         type="button"
                         class="btn btn-sm btn-warning"
                         wire:click="editar({{ $item['id'] }})">
-                        <i class="fa fa-edit"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </button>
                     <button
                         type="button"
                         class="btn btn-sm btn-danger"
                         wire:click="confirmarEliminar({{ $item['id'] }})">
-                        <i class="fa fa-trash"></i>
+                        <i class="fa-solid fa-trash"></i>
                     </button>
                 </td>
             </tr>

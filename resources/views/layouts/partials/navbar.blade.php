@@ -6,7 +6,7 @@
            data-lte-toggle="sidebar"
            href="#">
 
-            <i class="fas fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
 
         </a>
 
@@ -18,7 +18,7 @@
                    href="#"
                    data-bs-toggle="dropdown">
 
-                    <i class="fas fa-bell"></i>
+                    <i class="fa-solid fa-bell"></i>
 
                     <span class="navbar-badge badge text-bg-danger">
                         0
@@ -52,7 +52,7 @@
                     <a href="{{ route('profile.show') }}"
                        class="dropdown-item">
 
-                        <i class="fas fa-user me-2"></i>
+                        <i class="fa-solid fa-user me-2"></i>
                         Mi Perfil
 
                     </a>
@@ -67,7 +67,7 @@
                         <button type="submit"
                                 class="dropdown-item text-danger">
 
-                            <i class="fas fa-sign-out-alt me-2"></i>
+                            <i class="fa-solid fa-right-from-bracket me-2"></i>
                             Salir
 
                         </button>

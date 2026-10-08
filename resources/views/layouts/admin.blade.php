@@ -289,7 +289,7 @@
                 <li class="user-footer d-flex justify-content-between align-items-center">
                     <a href="{{ route('admin.users.perfiles') }}"
                     class="btn btn-outline-secondary">
-                        <i class="fas fa-user me-2"></i>
+                        <i class="fa-solid fa-user me-2"></i>
                         Mi Perfil
                     </a>
                     <form method="POST"
@@ -298,7 +298,7 @@
                         @csrf
                         <button type="submit"
                                 class="btn btn-outline-danger">
-                            <i class="fas fa-sign-out-alt me-2"></i>
+                            <i class="fa-solid fa-right-from-bracket me-2"></i>
                             Salir
                         </button>
                     </form>
@@ -336,7 +336,7 @@
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" data-accordion="false" id="navigation" style="color: white !important;">
                 <li class="nav-item fw-light">
                     <a href="{{ route('dashboard') }}" class="nav-link">
-                        <i class="nav-icon fas fa-home"  style="color: white !important;"></i>
+                        <i class="nav-icon fa-solid fa-house"  style="color: white !important;"></i>
                         <p  style="color: white !important;">
                             Panel principal
                         </p>
@@ -349,7 +349,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.aspirantes.listar') }}"
                        class="nav-link">
-                        <i class="nav-icon fas fa-users" style="color: white !important;"></i>
+                        <i class="nav-icon fa-solid fa-users" style="color: white !important;"></i>
                         <p style="color: white !important;">
                             Aspirantes con registro
                         </p>
@@ -359,7 +359,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.aspirantes.requeridos.listar') }}"
                        class="nav-link">
-                        <i class="nav-icon fas fa-user-clock" style="color: white !important;"></i>
+                        <i class="nav-icon fa-solid fa-user-clock" style="color: white !important;"></i>
                         <p style="color: white !important; white-space: normal; line-height: 1.4;">
                             Aspirantes con requerimiento y que subsanaron
                         </p>
@@ -369,7 +369,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.aspirantes.validados.listar') }}"
                        class="nav-link">
-                        <i class="nav-icon fas fa-user-check" style="color: white !important;"></i>
+                        <i class="nav-icon fa-solid fa-user-check" style="color: white !important;"></i>
                         <p style="color: white !important;">
                             Aspirantes con validación
                         </p>
@@ -379,7 +379,7 @@
                 @endrole
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-cog" style="color: white !important;"></i>
+                    <i class="nav-icon fa-solid fa-gear" style="color: white !important;"></i>
                     <p style="color: white !important;">
                         Configuraciones
                         <i class="nav-arrow bi bi-chevron-right"></i>
@@ -423,7 +423,7 @@
                 <li class="nav-item">
                     <a href="{{ route('admin.aspirantes.listar') }}"
                        class="nav-link">
-                        <i class="nav-icon fas fa-chart-column" style="color:white !important;"></i>
+                        <i class="nav-icon fa-solid fa-chart-column" style="color:white !important;"></i>
                         <p style="color: white !important;">
                             Reportes
                         </p>

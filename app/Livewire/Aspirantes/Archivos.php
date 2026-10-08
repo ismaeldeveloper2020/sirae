@@ -376,7 +376,7 @@ class Archivos extends Component
                     'alerta',
                     tipo:'warning',
                     titulo:'Expediente incompleto',
-                    mensaje:'Falta cargar: Constancia de estudios, titulo y/o cedula profesional'
+                    mensaje:'Falta cargar: Constancia de estudios, título y/o cédula profesional'
                 );
                 return;
             }
@@ -391,7 +391,7 @@ class Archivos extends Component
                 'tabla'=>'padron_curriculum_experiencias_electorales'
             ],
             11=>[
-                'nombre'=>'Experiencia en docencia',
+                'nombre'=>'Experiencia docente',
                 'tabla'=>'padron_curriculum_experiencias_docentes'
             ],
             12=>[

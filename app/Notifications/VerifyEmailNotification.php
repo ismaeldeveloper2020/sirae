@@ -13,7 +13,7 @@ class VerifyEmailNotification extends BaseVerifyEmail
             ->view('emails.sirae', [
                 'titulo' => 'Verifica tu correo electrónico',
                 'mensaje' =>
-                'Gracias por registrarte en SIRAE. Para activar tu cuenta confirma tu correo electrónico.',
+                'Gracias por registrarte en el SIRAE. Para activar tu cuenta confirma tu correo electrónico.',
                 'boton' => 'Verificar correo electrónico',
                 'url' => $url,
                 'url_texto' => 'Si tienes problemas para hacer clic en el botón "Verificar correo electrónico", copia y pega la siguiente URL en tu navegador:',

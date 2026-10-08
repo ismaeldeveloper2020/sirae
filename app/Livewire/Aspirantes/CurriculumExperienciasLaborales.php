@@ -20,9 +20,30 @@ class CurriculumExperienciasLaborales extends Component
     public $datos = [];
     protected function rules()
     {
+        $experienciaDuplicada = Rule::unique(
+            'padron_curriculum_experiencias_laborales',
+            'institucion_el'
+        )->where(function ($query) {
+            return $query
+                ->where('user_id', $this->user_id)
+                ->where('id_giro_el', $this->id_giro_el)
+                ->where('puesto_el', $this->puesto_el)
+                ->where('periodo_el', $this->periodo_el)
+                ->whereNull('deleted_at');
+        });
+
+        if ($this->experiencia_laboral_id) {
+            $experienciaDuplicada->ignore($this->experiencia_laboral_id);
+        }
+
         return [
             'id_giro_el' => 'required|not_in:0',
-            'institucion_el' => 'required|string|max:255',
+            'institucion_el' => [
+                'required',
+                'string',
+                'max:255',
+                $experienciaDuplicada,
+            ],
             'puesto_el' => 'required|string|max:255',
             'periodo_el' => [
                 'required',
@@ -48,6 +69,7 @@ class CurriculumExperienciasLaborales extends Component
         'id_giro_el.not_in' => 'Seleccione un giro válido.',
         'institucion_el.required' => 'Capture la institución.',
         'institucion_el.string' => 'La institución no es válida.',
+        'institucion_el.unique' => 'Ya existe una experiencia laboral con el mismo giro, institución, puesto y período.',
         'puesto_el.required' => 'Capture el puesto.',
         'puesto_el.string' => 'El puesto no es válido.',
         'periodo_el.required' => 'Debe capturar el período.',
@@ -73,6 +95,10 @@ class CurriculumExperienciasLaborales extends Component
     }
     public function storeExperienciaLaboral()
     {
+        $this->institucion_el = trim((string) ($this->institucion_el ?? ''));
+        $this->puesto_el = trim((string) ($this->puesto_el ?? ''));
+        $this->periodo_el = trim((string) ($this->periodo_el ?? ''));
+
         $this->validate();
         DB::beginTransaction();
         try {

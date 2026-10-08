@@ -113,7 +113,7 @@
             drop-shadow(0 8px 15px rgba(0,0,0,.18));
         }
         /* ICONOS LISTA */
-        .login-left .fa-check-circle {
+        .login-left .fa-circle-check {
             color:#6209d6!important;
         }
         /* PANEL DERECHO */
@@ -301,7 +301,7 @@
         /* ==============================
         ICONOS DE PASOS
         ============================== */
-        .login-left .fa-check-circle {
+        .login-left .fa-circle-check {
             background:#eee5ff;
             padding:7px;
             border-radius:50%;
@@ -432,19 +432,19 @@
                                 <hr>
                                 <div style="font-size:14px;text-align:justify;">
                                     <p>
-                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <i class="fa-solid fa-circle-check text-primary"></i>
                                         <strong>1. Crear cuenta:</strong>
                                         Registre sus datos para acceder a la plataforma.
                                         <br><br>
-                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <i class="fa-solid fa-circle-check text-primary"></i>
                                         <strong>2. Activar cuenta:</strong>
                                         Recibirá un correo con un enlace de activación.
                                         <br><br>
-                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <i class="fa-solid fa-circle-check text-primary"></i>
                                         <strong>3. Iniciar sesión:</strong>
                                         Ingrese con su correo y contraseña.
                                         <br><br>
-                                        <i class="fas fa-check-circle text-primary"></i>
+                                        <i class="fa-solid fa-circle-check text-primary"></i>
                                         <strong>4. Completar registro:</strong>
                                         Capture los módulos de
                                         <strong>Datos Generales, Currículum y Documentos</strong>
@@ -498,7 +498,7 @@
                                 </div>
                                 @if(session('status'))
                                 <div class="alert alert-success rounded-3">
-                                    <i class="fas fa-check-circle me-1"></i>
+                                    <i class="fa-solid fa-circle-check me-1"></i>
                                     {{ session('status') }}
                                 </div>
                                 @endif
@@ -515,19 +515,19 @@
                                     @csrf
                                     <div class="mb-3 mt-5">
                                         <div class="form-icon">
-                                            <i class="fas fa-envelope"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                             <input type="email" name="email" value="{{ old('email') }}" class="form-control" placeholder="correo@empresa.com" required autofocus>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fa-solid fa-lock"></i>
                                             <input type="password" name="password" class="form-control" placeholder="********" required>
                                         </div>
                                     </div>
                                     <div class="d-grid mb-3">
                                         <button type="submit" class="btn btn-primary btn-login rounded-pill" style="background-color: #E22275 !important;">
-                                            <i class="fas fa-sign-in-alt me-2"></i>
+                                            <i class="fa-solid fa-right-to-bracket me-2"></i>
                                             Iniciar Sesión
                                         </button>
                                     </div>
@@ -536,7 +536,7 @@
                                     <div class="mt-3 p-1">
                                         <div class="mb-1">
                                             <a href="#" style="font-size: 13px;" class="text-primary fw-semibold text-decoration-none" data-bs-toggle="modal" data-bs-target="#privacidadModal">
-                                                <i class="fas fa-file-contract me-2"></i>
+                                                <i class="fa-solid fa-file-contract me-2"></i>
                                                 Consultar políticas de privacidad y manejo de datos personales
                                             </a>
                                         </div>
@@ -572,19 +572,19 @@
                                 <div class="mt-4">
                                     <div class="d-flex gap-2 w-100">
                                         <button class="btn btn-outline-success btn-sm rounded-pill flex-fill" data-bs-toggle="modal" data-bs-target="#requisitosModal">
-                                            <i class="fas fa-file-alt me-1"></i>
+                                            <i class="fa-solid fa-file-lines me-1"></i>
                                             Requisitos
                                         </button>
                                         <button class="btn btn-outline-success btn-sm rounded-pill flex-fill" data-bs-toggle="modal" data-bs-target="#soporteModal">
-                                            <i class="fas fa-bullhorn me-1"></i>
+                                            <i class="fa-solid fa-bullhorn me-1"></i>
                                             ¿Necesitas ayuda?
                                         </button>
                                         <button class="btn btn-outline-success btn-sm rounded-pill flex-fill" data-bs-toggle="modal" data-bs-target="#manualModal">
-                                            <i class="fas fa-book me-1"></i>
+                                            <i class="fa-solid fa-book me-1"></i>
                                             Manual
                                         </button>
                                         <button class="btn btn-outline-success btn-sm rounded-pill flex-fill" data-bs-toggle="modal" data-bs-target="#videotutorialModal">
-                                            <i class="fas fa-video me-1"></i>
+                                            <i class="fa-solid fa-video me-1"></i>
                                             Video tutorial
                                         </button>
                                     </div>

@@ -101,7 +101,7 @@
                         <div class="col-lg-5">
                             <div class="left-panel h-100">
                                 <div class="logo-circle">
-                                    <i class="fas fa-envelope-open-text"></i>
+                                    <i class="fa-solid fa-envelope-open-text"></i>
                                 </div>
                                 <h2 class="fw-bold">
                                     {{ config('app.name') }}
@@ -145,20 +145,20 @@
                                             Correo Electrónico
                                         </label>
                                         <div class="form-icon">
-                                            <i class="fas fa-envelope"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                             <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="correo@empresa.com" required autofocus>
                                         </div>
                                     </div>
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-primary btn-send">
-                                            <i class="fas fa-paper-plane"></i>
+                                            <i class="fa-solid fa-paper-plane"></i>
                                             Enviar Enlace de Recuperación
                                         </button>
                                     </div>
                                 </form>
                                 <div class="text-center mt-4">
                                     <a href="{{ route('login') }}" class="btn btn-outline-secondary">
-                                        <i class="fas fa-arrow-left"></i>
+                                        <i class="fa-solid fa-arrow-left"></i>
                                         Volver al Login
                                     </a>
                                 </div>
