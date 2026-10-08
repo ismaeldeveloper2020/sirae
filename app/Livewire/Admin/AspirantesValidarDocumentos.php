@@ -35,6 +35,7 @@ class AspirantesValidarDocumentos extends Component
         $this->user_id = $user_id;
         $this->actualizarEstadoValidacion();
     }
+    //
     public function render()
     {
         $user = User::role('Aspirante')
