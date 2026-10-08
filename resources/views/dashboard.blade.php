@@ -30,7 +30,7 @@
             <div class="card border-1 shadow rounded-4 text-center h-100">
                 <div class="card-body">
                     <div class="rounded-circle bg-primary-subtle mx-auto d-flex align-items-center justify-content-center" style="width:75px;height:75px">
-                        <i class="fa fa-users text-primary fa-2x"></i>
+                        <i class="fa-solid fa-users text-primary fa-2x"></i>
                     </div>
                     <h1 class="fw-bold mt-3 text-primary">
                         {{$total}}
@@ -46,7 +46,7 @@
             <div class="card border-1 shadow rounded-4 text-center h-100">
                 <div class="card-body">
                     <div class="rounded-circle bg-info-subtle mx-auto d-flex align-items-center justify-content-center" style="width:75px;height:75px">
-                        <i class="fa fa-mars text-info fa-2x"></i>
+                        <i class="fa-solid fa-mars text-info fa-2x"></i>
                     </div>
                     <h1 class="fw-bold mt-3 text-info">
                          {{$hombres}}
@@ -62,7 +62,7 @@
             <div class="card border-1 shadow rounded-4 text-center h-100">
                 <div class="card-body">
                     <div class="rounded-circle bg-danger-subtle mx-auto d-flex align-items-center justify-content-center" style="width:75px;height:75px">
-                        <i class="fa fa-venus text-danger fa-2x"></i>
+                        <i class="fa-solid fa-venus text-danger fa-2x"></i>
                     </div>
                     <h1 class="fw-bold mt-3 text-danger">
                          {{$mujeres}}
@@ -78,7 +78,7 @@
             <div class="card border-1 shadow rounded-4 text-center h-100">
                 <div class="card-body">
                     <div class="rounded-circle bg-warning-subtle mx-auto d-flex align-items-center justify-content-center" style="width:75px;height:75px">
-                        <i class="fa fa-transgender text-warning fa-2x"></i>
+                        <i class="fa-solid fa-transgender text-warning fa-2x"></i>
                     </div>
                     <h1 class="fw-bold mt-3 text-warning">
                          {{$noBinario}}
@@ -135,7 +135,7 @@
         <div class="col-md-6">
             <div class="card shadow border-0 rounded-4">
                 <div class="card-header fw-bold">
-                    <i class="fa fa-chart-pie text-primary"></i>
+                    <i class="fa-solid fa-chart-pie text-primary"></i>
                     Géneros
                 </div>
                 <div class="card-body">
@@ -146,7 +146,7 @@
         <div class="col-md-6">
             <div class="card shadow border-0 rounded-4">
                 <div class="card-header fw-bold">
-                    <i class="fa fa-chart-pie text-primary"></i>
+                    <i class="fa-solid fa-chart-pie text-primary"></i>
                     Estados
                 </div>
                 <div class="card-body">
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
         labels: [
             'Hombres',
             'Mujeres',
-            'No binario'
+            'Personas no binarias'
         ],
         colors: ['#0dcaf0', '#dc3545', '#ffc107'],
         dataLabels: {

@@ -50,8 +50,8 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_tipo_ce') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
-                Tipo de conocimiento electoraL
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
+                Tipo de conocimiento electoral
             </label>
             <select id="id_tipo_ce" class="form-select select2" data-model="id_tipo_ce" wire:ignore>
                 @foreach($conocimientos_electorales as $key=>$value)
@@ -69,7 +69,7 @@
         @if($mostrar_otro_conocimiento)
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Describa otro tipo de conocimiento electoral
             </label>
             <input id="otro_ce" type="text" class="form-control 
@@ -83,7 +83,7 @@
         @endif
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_participacion_ce') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Tipo de participación
             </label>
             <select id="id_participacion_ce" class="form-select select2" data-model="id_participacion_ce" wire:ignore>
@@ -101,7 +101,7 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Institución
             </label>
             <input id="institucion_ce" type="text" class="form-control 
@@ -115,7 +115,7 @@
 
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Período (ejemplo: 2008-2010)
             </label>
             <input id="periodo_ce" type="text" class="form-control 
@@ -130,7 +130,7 @@
     <div class="d-flex justify-content-between align-items-center mt-4">
         <a href="{{route('dashboard')}}"
         class="btn btn-outline-secondary btn-md px-3 rounded-2">
-            <i class="fa fa-arrow-left me-1"></i>
+            <i class="fa-solid fa-arrow-left me-1"></i>
             Volver
         </a>
         <button 
@@ -140,11 +140,11 @@
             wire:loading.attr="disabled"
             wire:target="store_conocimiento_electoral">
             <span wire:loading.remove wire:target="store_conocimiento_electoral">
-                <i class="fa fa-save me-1"></i>
+                <i class="fa-solid fa-floppy-disk me-1"></i>
                 Guardar
             </span>
             <span wire:loading wire:target="store_conocimiento_electoral">
-                <i class="fa fa-spinner fa-spin me-1"></i>
+                <i class="fa-solid fa-spinner fa-spin me-1"></i>
                 Guardando
             </span>
         </button>
@@ -186,13 +186,13 @@
                         type="button"
                         class="btn btn-sm btn-warning"
                         wire:click="editarExperienciaElectoral({{ $item['id'] }})">
-                        <i class="fa fa-edit"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </button>
                     <button
                         type="button"
                         class="btn btn-sm btn-danger"
                         wire:click="confirmarDeleteConocimientoElectoral({{ $item['id'] }})">
-                        <i class="fa fa-trash"></i>
+                        <i class="fa-solid fa-trash"></i>
                     </button>
                 </td>
             </tr>

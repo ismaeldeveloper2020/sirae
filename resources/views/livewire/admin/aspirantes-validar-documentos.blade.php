@@ -214,9 +214,18 @@
                                     Pendiente
                                 </span>
                                 @elseif($doc->validado == 1)
-                                <span class="badge bg-warning text-dark">
-                                    Requerido
-                                </span>
+                                    <span class="badge bg-warning text-dark">
+                                        Requerido
+                                    </span>
+                                    @if(filled($doc->fecha_requirio))
+                                        <span class="badge bg-success">
+                                            Correo enviado
+                                        </span>
+                                    @else
+                                        <span class="badge bg-secondary">
+                                            Correo pendiente
+                                        </span>
+                                    @endif
                                 @elseif($doc->validado == 2)
                                 <span class="badge bg-info">
                                     Subsanado

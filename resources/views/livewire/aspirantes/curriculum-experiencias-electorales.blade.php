@@ -53,7 +53,7 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_cargo_ee') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Puesto o cargo
             </label>
             <select id="id_cargo_ee" class="form-select select2" data-model="id_cargo_ee" wire:ignore>
@@ -72,7 +72,7 @@
         @if($mostrar_otro_Cargo)
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Escriba el nombre del puesto o cargo ocupado
             </label>
             <input id="descripcion_otro_cargo_ee" type="text" class="form-control 
@@ -86,7 +86,7 @@
         @endif
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_institucion_ee') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Institución
             </label>
             <select id="id_institucion_ee" class="form-select select2" data-model="id_institucion_ee" wire:ignore>
@@ -105,7 +105,7 @@
         @if($mostrar_otro_instituto)
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Escriba el nombre de la institución
             </label>
             <input id="descripcion_otro_institucion_ee" type="text" class="form-control 
@@ -119,8 +119,8 @@
          @endif
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
-                Escriba el período en el que ocupó el puesto ocargo (ejemplo: 2018-2020)
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
+                Escriba el período en el que ocupó el puesto o cargo (ejemplo: 2018-2020)
             </label>
             <input id="periodo_ee" type="text" class="form-control 
             @error('periodo_ee') is-invalid @enderror" wire:model="periodo_ee">
@@ -134,7 +134,7 @@
     <div class="d-flex justify-content-between align-items-center mt-4">
         <a href="{{route('dashboard')}}"
         class="btn btn-outline-secondary btn-md px-3 rounded-2">
-            <i class="fa fa-arrow-left me-1"></i>
+            <i class="fa-solid fa-arrow-left me-1"></i>
             Volver
         </a>
         <button 
@@ -144,11 +144,11 @@
             wire:loading.attr="disabled"
             wire:target="storeExperienciaElectoral">
             <span wire:loading.remove wire:target="storeExperienciaElectoral">
-                <i class="fa fa-save me-1"></i>
+                <i class="fa-solid fa-floppy-disk me-1"></i>
                 Guardar
             </span>
             <span wire:loading wire:target="storeExperienciaElectoral">
-                <i class="fa fa-spinner fa-spin me-1"></i>
+                <i class="fa-solid fa-spinner fa-spin me-1"></i>
                 Guardando
             </span>
         </button>
@@ -190,13 +190,13 @@
                         type="button"
                         class="btn btn-sm btn-warning"
                         wire:click="editarExperienciaElectoral({{ $item['id'] }})">
-                        <i class="fa fa-edit"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </button>
                     <button
                         type="button"
                         class="btn btn-sm btn-danger"
                         wire:click="confirmarDeleteExperienciaElectoral({{ $item['id'] }})">
-                        <i class="fa fa-trash"></i>
+                        <i class="fa-solid fa-trash"></i>
                     </button>
                 </td>
             </tr>

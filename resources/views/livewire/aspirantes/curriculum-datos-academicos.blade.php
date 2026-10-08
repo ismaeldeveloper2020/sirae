@@ -54,7 +54,7 @@
         </div>
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_nivel_estudios') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Nivel de estudios
             </label>
             <select id="id_nivel_estudios" class="form-select select2" data-model="id_nivel_estudios" wire:ignore>
@@ -73,7 +73,7 @@
         @if($mostrar_carrera)
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_carrera') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Licenciatura
             </label>
             <select id="id_carrera" class="form-select select2" data-model="id_carrera" wire:ignore>
@@ -93,7 +93,7 @@
         @if($mostrar_otra_carrera)
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Escriba el nombre de la licenciatura
             </label>
             <input id="otra_carrera" type="text" class="form-control 
@@ -108,7 +108,7 @@
         @if($mostrar_estatus_nivel_estudios)
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_status_nivel_estudios') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Estatus del nivel de estudios 
             </label>
             <select id="id_status_nivel_estudios" class="form-select select2" data-model="id_status_nivel_estudios" wire:ignore>
@@ -128,7 +128,7 @@
         @if($mostrar_otros_estudios)
         <div class="col-md-12 mt-4">
               <label class="form-label small @error('id_otros_estudios') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Estudios de posgrado 
             </label>
             <select id="id_otros_estudios" class="form-select select2" data-model="id_otros_estudios" wire:ignore>
@@ -148,7 +148,7 @@
         @if($mostrar_posgrado)
         <div class="col-md-12 mt-4">
             <label class="form-label small text-muted">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Posgrado
             </label>
             <input id="posgrado" type="text" class="form-control 
@@ -163,7 +163,7 @@
         @if($mostrar_estatus_posgrado)
         <div class="col-md-12 mt-4">
             <label class="form-label small @error('id_status_otro_estudios') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Estatus de los estudios de posgrado
             </label>
             <select id="id_status_otro_estudios" class="form-select select2" data-model="id_status_otro_estudios" wire:ignore>
@@ -184,7 +184,7 @@
     <div class="d-flex justify-content-between align-items-center mt-4">
         <a href="{{route('dashboard')}}"
         class="btn btn-outline-secondary btn-md px-3 rounded-2">
-            <i class="fa fa-arrow-left me-1"></i>
+            <i class="fa-solid fa-arrow-left me-1"></i>
             Volver
         </a>
         <button 
@@ -195,12 +195,12 @@
             wire:target="storeDatosAcademicos">
 
             <span wire:loading.remove wire:target="storeDatosAcademicos">
-                <i class="fa fa-save me-1"></i>
+                <i class="fa-solid fa-floppy-disk me-1"></i>
                 Guardar
             </span>
 
             <span wire:loading wire:target="storeDatosAcademicos">
-                <i class="fa fa-spinner fa-spin me-1"></i>
+                <i class="fa-solid fa-spinner fa-spin me-1"></i>
                 Guardando
             </span>
         </button>

@@ -102,7 +102,7 @@
                         <div class="col-lg-5">
                             <div class="left-panel h-100">
                                 <div class="logo-circle">
-                                    <i class="fas fa-key"></i>
+                                    <i class="fa-solid fa-key"></i>
                                 </div>
                                 <h2 class="fw-bold">
                                     {{ config('app.name') }}
@@ -140,7 +140,7 @@
                                             Correo Electrónico
                                         </label>
                                         <div class="form-icon">
-                                            <i class="fas fa-envelope"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                             <input type="email" name="email" class="form-control" value="{{ old('email', $request->email) }}" required autofocus>
                                         </div>
                                     </div>
@@ -149,7 +149,7 @@
                                             Nueva Contraseña
                                         </label>
                                         <div class="form-icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fa-solid fa-lock"></i>
                                             <input type="password" name="password" class="form-control" required>
                                         </div>
                                     </div>
@@ -158,13 +158,13 @@
                                             Confirmar Contraseña
                                         </label>
                                         <div class="form-icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fa-solid fa-lock"></i>
                                             <input type="password" name="password_confirmation" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="d-grid">
                                         <button type="submit" class="btn btn-primary btn-reset">
-                                            <i class="fas fa-save"></i>
+                                            <i class="fa-solid fa-floppy-disk"></i>
                                             Restablecer Contraseña
                                         </button>
                                     </div>

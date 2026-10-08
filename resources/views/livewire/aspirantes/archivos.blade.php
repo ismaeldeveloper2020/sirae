@@ -112,32 +112,32 @@
             <div class="card-body">
             <div class="mt-3 mb-4">
                 <p class="nota-expediente">
-                    <i class="fa fa-file-pdf"></i>
+                    <i class="fa-solid fa-file-pdf"></i>
                     <em>
                         Únicamente se admiten documentos en formato PDF con un tamaño máximo de 2 MB. Si necesita agregar varias hojas comprobatorias para un mismo documento, deberá unirlas previamente en un solo archivo PDF.
                     </em>
                 </p>
                 <p class="nota-expediente">
-                    <i class="fa fa-upload"></i>
+                    <i class="fa-solid fa-upload"></i>
                     <em>
                         Para cargar un documento, seleccione el archivo PDF correspondiente en el campo de carga ubicado debajo del nombre del documento requerido. Una vez seleccionado el archivo,
                         aparecerá el botón "guardar archivo" para enviarlo al sistema.
                     </em>
                 </p>
                 <p class="nota-expediente">
-                    <i class="fa fa-eye"></i>
+                    <i class="fa-solid fa-eye"></i>
                     <em>
                         Después de guardar correctamente el documento, podrá visualizarlo utilizando el botón con el ícono de “visualizar documento” ubicado en la parte derecha del documento cargado.
                     </em>
                 </p>
                 <p class="nota-expediente">
-                    <i class="fa fa-rotate"></i>
+                    <i class="fa-solid fa-rotate"></i>
                     <em>
                         Si por alguna razón seleccionó o cargó un archivo incorrecto, puede utilizar la opción "sustituir documento" mediante el botón con el ícono de “rotación”. Esta opción permite reemplazar el documento cargado por el archivo correcto y guardarlo nuevamente en el sistema.
                     </em>
                 </p>
                 <p class="nota-expediente">
-                    <i class="fa fa-file-signature"></i>
+                    <i class="fa-solid fa-file-signature"></i>
                     <em>
                         Para los documentos de carta bajo protesta de decir verdad y constancia o carta compromiso de situación fiscal, deberá subir
                         el formato disponible en:
@@ -146,13 +146,13 @@
                     </em>
                 </p>
                 <p class="nota-expediente">
-                    <i class="fa fa-id-card"></i>
+                    <i class="fa-solid fa-id-card"></i>
                     <em>
                         Es necesario que la Credencial para Votar y la licencia para conducir sean vigentes; en caso de que no cuente con Credencial para Votar vigente, deberá capturar el comprobante de trámite. El comprobante de domicilio debe ser reciente (no mayor a tres meses).
                     </em>
                 </p>
                 <p class="nota-expediente">
-                    <i class="fa fa-check-circle"></i>
+                    <i class="fa-solid fa-circle-check"></i>
                     <em>
                         Antes de guardar el módulo, verifique que todos los documentos requeridos correspondan a lo solicitado.
                     </em>
@@ -191,22 +191,22 @@
                             <div class="mb-2">
                             @if($archivo->validado == 3)
                                 <span class="badge bg-success">
-                                    <i class="fa fa-check"></i>
+                                    <i class="fa-solid fa-check"></i>
                                     Validado
                                 </span>
                             @elseif($archivo->validado == 1 && !empty($archivo->observacion))
                                 <span class="badge bg-danger">
-                                    <i class="fa fa-warning"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
                                     Corrección requerida
                                 </span>
                             @elseif($archivo->validado == 2)
                                 <span class="badge bg-info text-dark">
-                                    <i class="fa fa-warning"></i>
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
                                     Subsanado
                                 </span>
                             @else
                                 <span class="badge bg-warning text-dark">
-                                    <i class="fa fa-clock"></i>
+                                    <i class="fa-solid fa-clock"></i>
                                     En revisión
                                 </span>
                             @endif
@@ -233,7 +233,7 @@
                                             class="btn btn-outline-primary btn-icon"
                                             data-bs-toggle="modal"
                                             data-bs-target="#pdf{{$doc->id}}">
-                                            <i class="fa fa-eye"></i>
+                                            <i class="fa-solid fa-eye"></i>
                                         </button>
                                     </span>
                                    @if($moduloCompletado && $esObligatorio && $archivo->validado == 1 && !empty($archivo->observacion))
@@ -243,7 +243,7 @@
                                                 type="button"
                                                 class="btn btn-outline-success btn-icon btn-subsanar"
                                                  wire:click="seleccionarSubsanacion({{$doc->id}})">
-                                                 <i class="fa fa-file-circle-check"></i>
+                                                 <i class="fa-solid fa-file-circle-check"></i>
                                             </button>
                                         </span>
                                     @endif
@@ -255,7 +255,7 @@
                                                 type="button"
                                                 class="btn btn-outline-info btn-icon btn-sustituir"
                                                 wire:click="seleccionarCambio({{$doc->id}})">
-                                                <i class="fa fa-rotate"></i>
+                                                <i class="fa-solid fa-rotate"></i>
                                             </button>
                                         </span> 
                                         <span data-bs-toggle="tooltip"
@@ -264,7 +264,7 @@
                                                 type="button"
                                                 class="btn btn-outline-danger btn-icon btn-eliminar"
                                                 wire:click="eliminar({{$doc->id}})">
-                                                <i class="fa fa-trash"></i>
+                                                <i class="fa-solid fa-trash"></i>
                                             </button>
                                         </span> 
                                     @endif
@@ -290,14 +290,14 @@
                                         <button
                                             class="btn btn-success btn-sm w-100 mt-2"
                                             wire:click="subsanar({{$doc->id}})">
-                                            <i class="fa fa-upload"></i>
+                                    <i class="fa-solid fa-upload"></i>
                                             Guardar subsanación
                                         </button>
                                     @else
                                         <button
                                             class="btn btn-success btn-sm w-100 mt-2"
                                             wire:click="guardar({{$doc->id}})">
-                                            <i class="fa fa-upload"></i>
+                                            <i class="fa-solid fa-upload"></i>
                                             Guardar sustitución
                                         </button>
                                     @endif
@@ -323,7 +323,7 @@
                             <button
                             class="btn btn-success btn-sm w-100 mt-2"
                             wire:click="guardar({{$doc->id}})">
-                                <i class="fa fa-save"></i>
+                                <i class="fa-solid fa-floppy-disk"></i>
                                 Guardar documento
                             </button>
                             @endif
@@ -342,7 +342,7 @@
                         <div class="modal-content">
                             <div class="modal-header bg-dark text-white">
                                 <h6 class="modal-title">
-                                    <i class="fa fa-file-pdf text-danger"></i>
+                                    <i class="fa-solid fa-file-pdf text-danger"></i>
                                     {{$doc->nombre}}
                                 </h6>
                                 <button
@@ -367,7 +367,7 @@
                 <div class="d-flex justify-content-between mt-5 pt-0 mb-0">
 
                     <a href="{{route('dashboard')}}" class="btn btn-outline-secondary">
-                        <i class="fa fa-arrow-left"></i>
+                        <i class="fa-solid fa-arrow-left"></i>
                         Volver
                     </a>
 
@@ -378,12 +378,12 @@
                         wire:target="finalizarModulo">
 
                         <span wire:loading.remove wire:target="finalizarModulo">
-                            <i class="fa fa-save"></i>
+                            <i class="fa-solid fa-floppy-disk"></i>
                             Guardar
                         </span>
 
                         <span wire:loading wire:target="finalizarModulo">
-                            <i class="fa fa-spinner fa-spin"></i>
+                            <i class="fa-solid fa-spinner fa-spin"></i>
                             Guardando
                         </span>
 

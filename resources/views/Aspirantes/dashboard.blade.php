@@ -483,7 +483,7 @@ if ($configuracion_examen && !$examen) {
                 @if($modulos_completos)
 
                     <button class="btn btn-secondary" disabled>
-                        <i class="fa-solid fa-check-circle"></i>
+                        <i class="fa-solid fa-circle-check"></i>
                         Registro completado
                     </button>
 
@@ -608,7 +608,7 @@ if ($configuracion_examen && !$examen) {
 
             <div class="modal-header">
                 <h5 class="modal-title fw-bold" id="modalRecomendacionesLabel">
-                    <i class="fas fa-info-circle me-2" style="color:#E22275;"></i>
+                    <i class="fa-solid fa-circle-info me-2" style="color:#E22275;"></i>
                     Recomendaciones antes de iniciar
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
@@ -620,42 +620,42 @@ if ($configuracion_examen && !$examen) {
                 </p>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-3 d-flex align-items-start">
-                        <i class="fas fa-window-maximize me-2 mt-1"
+                        <i class="fa-solid fa-window-maximize me-2 mt-1"
                            style="color:#E22275;"></i>
                         <span>
                             No cierres la pestaña del navegador durante el examen.
                         </span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
-                        <i class="fas fa-sign-in-alt me-2 mt-1"
+                        <i class="fa-solid fa-right-to-bracket me-2 mt-1"
                            style="color:#E22275;"></i>
                         <span>
                             Si se cierra, vuelve a entrar con tu usuario para continuar el examen.
                         </span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
-                        <i class="fas fa-clock me-2 mt-1"
+                        <i class="fa-solid fa-clock me-2 mt-1"
                            style="color:#E22275;"></i>
                         <span>
                             El tiempo corre desde el inicio y no se detiene.
                         </span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
-                        <i class="fas fa-exclamation-triangle me-2 mt-1"
+                        <i class="fa-solid fa-triangle-exclamation me-2 mt-1"
                            style="color:#E22275;"></i>
                         <span>
                             Las preguntas no respondidas se registran como incorrectas.
                         </span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
-                        <i class="fas fa-check-circle me-2 mt-1"
+                        <i class="fa-solid fa-circle-check me-2 mt-1"
                            style="color:#E22275;"></i>
                         <span>
                             Al finalizar podrás regresar al panel o cerrar sesión.
                         </span>
                     </li>
                     <li class="d-flex align-items-start">
-                        <i class="fas fa-wifi me-2 mt-1"
+                        <i class="fa-solid fa-wifi me-2 mt-1"
                            style="color:#E22275;"></i>
                         <span>
                             Mantén una conexión estable a Internet durante todo el examen.

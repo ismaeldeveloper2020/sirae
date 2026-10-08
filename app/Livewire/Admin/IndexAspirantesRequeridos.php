@@ -564,7 +564,7 @@ class IndexAspirantesRequeridos extends Component
             )
             ->join('cat_cargos_ocupados','cat_cargos_ocupados.id','=','padron_curriculum_experiencias_electorales.id_cargo_ee')
             ->join('cat_institutos','cat_institutos.id','=','padron_curriculum_experiencias_electorales.id_institucion_ee')
-            ->join('cat_periodos','cat_periodos.id','=','padron_curriculum_experiencias_electorales.id_periodo_ee')
+            ->leftJoin('cat_periodos','cat_periodos.id','=','padron_curriculum_experiencias_electorales.id_periodo_ee')
             ->whereNull('padron_curriculum_experiencias_electorales.deleted_at')
             ->where('padron_curriculum_experiencias_electorales.user_id',$user_id)
             ->get();

@@ -151,8 +151,8 @@ class AspirantesValidarDocumentos extends Component
                 $doc->update([
                     'validado' => 1,
                     'observacion' => $this->observacion,
-                    'id_usuario_requirio' => auth()->id(),
-                    'fecha_requirio' => now()
+                    'id_usuario_requirio' => null,
+                    'fecha_requirio' => null
                 ]);
                 $tieneRequerimientos = Documento::where('user_id', $this->user_id)
                     ->where('validado', 1)
@@ -188,7 +188,7 @@ class AspirantesValidarDocumentos extends Component
             ]);
             session()->flash(
                 'status',
-                'Requerimiento agregado y enviado por correo correctamente'
+                'Requerimiento guardado. Falta enviar el correo al aspirante.'
             );
         } catch (\Exception $e) {
             \Log::error(
@@ -347,6 +347,7 @@ class AspirantesValidarDocumentos extends Component
                 ->where('user_id', $user_id)
                 ->where('validado', 1)
                 ->whereNotNull('observacion')
+                ->whereNull('fecha_requirio')
                 ->pluck('id');
 
             Documento::whereIn('id', $ids)
@@ -358,7 +359,7 @@ class AspirantesValidarDocumentos extends Component
             DB::commit();
             session()->flash(
                 'status',
-                'Requerimiento enviado correctamente.'
+                'Requerimiento enviado correctamente por correo.'
             );
         } catch (\Exception $e) {
             DB::rollBack();
@@ -577,6 +578,7 @@ class AspirantesValidarDocumentos extends Component
             ->where('padron_documentos.user_id', $user_id)
             ->where('padron_documentos.validado', 1)
             ->whereNotNull('padron_documentos.observacion')
+            ->whereNull('padron_documentos.fecha_requirio')
             ->select(
                 'cat_documentos.nombre as documento',
                 'padron_documentos.observacion'

@@ -174,7 +174,7 @@
         {{-- TIPO ENLACE --}}
         <div class="mb-3">
             <label class="form-label small @error('id_tipo_cargo') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Tipo de enlace
             </label>
             <select id="id_tipo_cargo" class="form-select select2" data-model="id_tipo_cargo" wire:ignore>
@@ -194,7 +194,7 @@
         @if($mostrar_distrito)
         <div class="mb-3">
             <label class="form-label small @error('id_distrital') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Distrito
             </label>
             <select id="id_distrital" class="form-select select2" data-model="id_distrital" wire:ignore>
@@ -215,7 +215,7 @@
         @if($mostrar_municipio)
         <div class="mb-3">
             <label class="form-label small @error('id_municipal') text-danger @else text-muted @enderror">
-                <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                 Municipio
             </label>
             <select id="id_municipal" class="form-select select2" data-model="id_municipal" wire:ignore>
@@ -248,7 +248,7 @@
                 {{-- NOMBRE --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Nombre(s)
                     </label>
                     <input type="text" id="nombre" class="form-control 
@@ -262,7 +262,7 @@
                 {{-- APELLIDO PATERNO --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Primer apellido
                     </label>
                     <input type="text" id="apaterno" class="form-control 
@@ -290,7 +290,7 @@
                 <div class="row">
                     <div class="col-md-7 mb-3">
                         <label class="form-label small text-muted">
-                            <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                            <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                             Rfc
                         </label>
                         <input type="text" id="rfc" class="form-control text-uppercase
@@ -318,8 +318,8 @@
                 {{-- CURP --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
-                        Curp
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
+                        CURP
                     </label>
                     <input type="text" id="curp" class="form-control text-uppercase
                     @error('curp') is-invalid @enderror" wire:model="curp">
@@ -333,7 +333,7 @@
                 {{-- DISCAPACIDAD --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_discapacidad') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Discapacidad
                     </label>
                     <select id="id_discapacidad" class="form-select select2" data-model="id_discapacidad" wire:ignore>
@@ -352,7 +352,7 @@
                 {{-- GENERO --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_genero') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Género
                     </label>
                     <select id="id_genero" class="form-select select2" data-model="id_genero" wire:ignore>
@@ -372,8 +372,8 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label class="form-label small text-muted">
-                            {{-- <i class="fa fa-star text-danger" style="font-size:8px;"></i> --}}
-                            Teléfono casa
+                            {{-- <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i> --}}
+                            Teléfono de casa
                         </label>
                         <input type="text" id="telefono_casa" class="form-control 
                         @error('telefono_casa') is-invalid @enderror" wire:model="telefono_casa">
@@ -385,7 +385,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label class="form-label small text-muted">
-                            <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                            <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                             Teléfono celular
                         </label>
                         <input type="text" id="telefono_movil" class="form-control 
@@ -403,7 +403,7 @@
                 {{-- LICENCIA --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_tipo_licencia') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Tipo de licencia
                     </label>
                     <select id="id_tipo_licencia" class="form-select select2" data-model="id_tipo_licencia" wire:ignore>
@@ -422,7 +422,7 @@
                 {{-- ETNIA --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_etnia') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Autoadscripción indígena
                     </label>
                     <select id="id_etnia" class="form-select select2" data-model="id_etnia" wire:ignore>
@@ -441,7 +441,7 @@
                 {{-- LENGUA --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_idioma_predominante') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Lengua predominante
                     </label>
                     <select id="id_idioma_predominante" class="form-select select2" data-model="id_idioma_predominante" wire:ignore>
@@ -460,7 +460,7 @@
                 {{-- OTRA LENGUA --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_otro_idioma') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Otra lengua
                     </label>
                     <select id="id_otro_idioma" class="form-select select2" data-model="id_otro_idioma" wire:ignore>
@@ -479,7 +479,7 @@
                 @if($mostrar_otro_idioma)
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Escriba cual
                     </label>
                     <input id="especifique_idioma" type="text" class="form-control 
@@ -494,7 +494,7 @@
                 {{-- OCUPACION --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Ocupación actual
                     </label>
                     <input id="ocupacion_actual" type="text" class="form-control 
@@ -508,7 +508,7 @@
                 {{-- CLAVE ELECTOR --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Clave de elector
                     </label>
                     <input id="clave_elector" type="text" class="form-control text-uppercase
@@ -577,7 +577,7 @@
                 {{-- MUNICIPIO --}}
                 <div class="mb-3">
                     <label class="form-label small @error('id_municipio') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Municipio
                     </label>
                     <select id="id_municipio" class="form-select select2" data-model="id_municipio" wire:ignore>
@@ -596,7 +596,7 @@
                 {{-- COLONIA --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Colonia
                     </label>
                     <input id="colonia" type="text" class="form-control 
@@ -610,7 +610,7 @@
                 {{-- CALLE --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Calle
                     </label>
                     <input id="calle" type="text" class="form-control 
@@ -627,7 +627,7 @@
                 <div class="row">
                     <div class="col-md-12 mb-3">
                         <label class="form-label small text-muted">
-                            <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                            <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                             Número exterior
                         </label>
                         <input id="num_casa_exterior" type="text" class="form-control 
@@ -654,7 +654,7 @@
                 {{-- CP --}}
                 <div class="mb-3">
                     <label class="form-label small text-muted">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Código postal
                     </label>
                     <input id="cp" type="text" class="form-control 
@@ -669,7 +669,7 @@
                 {{--  
                 <div class="mb-3">
                     <label class="form-label small @error('id_estado') text-danger @else text-muted @enderror">
-                        <i class="fa fa-star text-danger" style="font-size:8px;"></i>
+                        <i class="fa-solid fa-star text-danger" style="font-size:8px;"></i>
                         Estado
                     </label>
                     <select id="id_estado" class="form-select select2" data-model="id_estado" wire:ignore>
@@ -693,17 +693,17 @@
           
             @if(auth()->user()->hasRole('Aspirante'))
                 <a href="{{ route('dashboard') }}" class="btn btn-outline-secondary btn-md px-3 rounded-2">
-                    <i class="fa fa-arrow-left me-1"></i>
+                    <i class="fa-solid fa-arrow-left me-1"></i>
                     Volver
                 </a>
             @endif
-            <button type="button" class="btn btn-guardar btn-md px-4 rounded-2" wire:click="storeGenerales" wire:loading.attr="disabled">
+            <button type="button" class="btn btn-guardar btn-md px-4 rounded-2" wire:click="storeGenerales" data-focus-validation-errors wire:loading.attr="disabled">
                 <span wire:loading.remove>
-                    <i class="fa fa-save me-1"></i>
+                    <i class="fa-solid fa-floppy-disk me-1"></i>
                     Guardar
                 </span>
                 <span wire:loading>
-                    <i class="fa fa-spinner fa-spin me-1"></i>
+                    <i class="fa-solid fa-spinner fa-spin me-1"></i>
                     Guardando
                 </span>
             </button>
@@ -851,7 +851,85 @@
                     }
                 });
         });
+        actualizarErroresSelect2();
     }
+
+    let enfocarErrorDespuesDeGuardar = false;
+
+    function tieneMensajeDeError(elemento) {
+        const contenedor = elemento.closest('.mb-3') || elemento.parentElement;
+
+        if (!contenedor) {
+            return false;
+        }
+
+        return Array.from(contenedor.querySelectorAll('small.text-danger, .invalid-feedback'))
+            .some(error => error.textContent.trim() !== '' && error.offsetParent !== null);
+    }
+
+    function actualizarErroresSelect2() {
+        document.querySelectorAll('select.select2').forEach(select => {
+            const contenedor = select.nextElementSibling;
+
+            if (!contenedor?.classList.contains('select2-container')) {
+                return;
+            }
+
+            contenedor.classList.toggle('select2-error', tieneMensajeDeError(select));
+        });
+    }
+
+    function enfocarPrimerError() {
+        if (!enfocarErrorDespuesDeGuardar) {
+            return;
+        }
+
+        actualizarErroresSelect2();
+
+        const campos = Array.from(document.querySelectorAll(
+            'input, select.select2, textarea'
+        )).filter(campo => {
+            if (campo.matches('select.select2')) {
+                return tieneMensajeDeError(campo);
+            }
+
+            return campo.classList.contains('is-invalid') || tieneMensajeDeError(campo);
+        });
+
+        const primerCampo = campos.sort((a, b) =>
+            a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+        )[0];
+
+        if (!primerCampo) {
+            enfocarErrorDespuesDeGuardar = false;
+            return;
+        }
+
+        const elementoVisible = primerCampo.matches('select.select2')
+            ? primerCampo.nextElementSibling?.querySelector('.select2-selection')
+            : primerCampo;
+
+        if (!elementoVisible) {
+            enfocarErrorDespuesDeGuardar = false;
+            return;
+        }
+
+        enfocarErrorDespuesDeGuardar = false;
+        elementoVisible.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+
+        setTimeout(() => {
+            elementoVisible.focus({ preventScroll: true });
+        }, 250);
+    }
+
+    document.addEventListener('click', event => {
+        if (event.target.closest('[data-focus-validation-errors]')) {
+            enfocarErrorDespuesDeGuardar = true;
+        }
+    });
 
     /*$(document).on('blur', '#clave_elector', function () {
         const clave = $(this).val().trim().toUpperCase();
@@ -972,6 +1050,7 @@
     Livewire.hook('morphed', () => {
         iniciarSelect2();
         iniciarValidaciones();
+        setTimeout(enfocarPrimerError, 100);
     });
     // DESDE PHP $this->dispatch('refresh-select2')
     window.addEventListener('refresh-select2', () => {

@@ -121,7 +121,7 @@
                         <div class="row g-3">
                             <div class="col-md-12 mb-2">
                                 <label class="form-label small @error('id_rol') text-danger @else text-muted @enderror">
-                                    <i class="fa fa-star text-muted" style="font-size:8px;"></i>
+                                    <i class="fa-solid fa-star text-muted" style="font-size:8px;"></i>
                                     Rol
                                 </label>
                                 <div wire:ignore>  

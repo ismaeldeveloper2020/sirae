@@ -25,7 +25,7 @@
     <div class="card-header d-flex align-items-center w-100">
         <h5 class="mb-0">
             <i class="bi bi-people-fill me-2"></i>
-            Aspirantes registrados
+            Aspirantes con registro
         </h5>
         <span class="badge bg-secondary rounded-pill px-3 ms-auto fs-6">
             Total de registros: {{ count($users) }}
@@ -53,7 +53,7 @@
                             Validado
                         </th>
                         <th class="none">
-                            Curp
+                            CURP
                         </th>
                         <th class="none">
                             Rfc

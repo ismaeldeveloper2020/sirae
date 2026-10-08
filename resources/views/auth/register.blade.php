@@ -103,7 +103,7 @@
                         <div class="col-lg-5">
                             <div class="left-panel h-100">
                                 <div class="logo-circle">
-                                    <i class="fas fa-user-plus"></i>
+                                    <i class="fa-solid fa-user-plus"></i>
                                 </div>
                                 <h2 class="fw-bold">
                                     {{ config('app.name') }}
@@ -112,7 +112,7 @@
                                     Cree una cuenta para acceder al sistema.
                                 </p>
                                 <hr>
-                                <p style="text-align: justify;"><i class="fas fa-check-circle"></i>
+                                <p style="text-align: justify;"><i class="fa-solid fa-circle-check"></i>
                                     Cree su cuenta en el SIRAE para iniciar su proceso
                                     de registro como aspirante y acceder a la
                                     convocatoria para participar como enlace distrital o
@@ -148,37 +148,37 @@
                                     @csrf
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
                                             <input type="text" name="nombre" placeholder="Nombre(s) completo" class="form-control" value="{{ old('nombre') }}" required autofocus>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
                                             <input type="text" name="apaterno" placeholder="Primer apellido" class="form-control" value="{{ old('apaterno') }}" required autofocus>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-user"></i>
+                                            <i class="fa-solid fa-user"></i>
                                             <input type="text" name="amaterno" placeholder="Segundo apellido" class="form-control" value="{{ old('amaterno') }}" required autofocus>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-envelope"></i>
+                                            <i class="fa-solid fa-envelope"></i>
                                             <input type="email" name="email" placeholder="correo@gmail.com" class="form-control" value="{{ old('email') }}" required>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fa-solid fa-lock"></i>
                                             <input type="password" name="password" placeholder="Contraseña" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="form-icon">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="fa-solid fa-lock"></i>
                                             <input type="password" placeholder="Confirmar contraseña" name="password_confirmation" class="form-control" required>
                                         </div>
                                     </div>
@@ -199,8 +199,8 @@
                                     @endif
                                     <div class="d-grid mb-3">
                                         <button type="submit" class="btn btn-primary btn-register">
-                                            <i class="fas fa-user-plus"></i>
-                                            Crear Cuenta
+                                            <i class="fa-solid fa-user-plus"></i>
+                                            Crear cuenta
                                         </button>
                                     </div>
                                 </form>

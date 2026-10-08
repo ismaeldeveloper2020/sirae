@@ -30,8 +30,19 @@ class CurriculumDatosAcademicos extends Component
     {
         return [
             'id_nivel_estudios' => 'required|not_in:0',
-            'id_carrera' => 'nullable|required_if:id_nivel_estudios,4,5|not_in:0',
-            'otra_carrera' => 'nullable|required_if:id_carrera,9|string|max:255',
+            'id_carrera' => 'nullable|required_if:id_nivel_estudios,5|not_in:0',
+            'otra_carrera' => [
+                'nullable',
+                'string',
+                'max:255',
+                Rule::requiredIf(function () {
+                    return (string) $this->id_nivel_estudios === '4'
+                        || (
+                            (string) $this->id_nivel_estudios === '5'
+                            && (string) $this->id_carrera === '9'
+                        );
+                }),
+            ],
             'id_status_nivel_estudios' => 'nullable|required_if:id_nivel_estudios,4,5|not_in:0',
             'id_otros_estudios' => 'nullable|required_if:id_nivel_estudios,5|not_in:0',
             'posgrado' => 'nullable|required_if:id_otros_estudios,1,2,3|string|max:255',
@@ -41,7 +52,7 @@ class CurriculumDatosAcademicos extends Component
     protected $messages = [
         'id_nivel_estudios.required' => 'Seleccione el nivel de estudios.',
         'id_carrera.required_if' => 'Seleccione la carrera.',
-        'otra_carrera.required_if' => 'Capture la otra carrera.',
+        'otra_carrera.required' => 'Capture la licenciatura.',
         'id_status_nivel_estudios.required_if' => 'Seleccione el estatus del estudio.',
         'id_otros_estudios.required_if' => 'Seleccione otros estudios.',
         'posgrado.required_if' => 'Capture el posgrado.',
@@ -52,7 +63,9 @@ class CurriculumDatosAcademicos extends Component
         $this->user_id = $user_id ?? auth()->id();
         $this->cargarDatos();
         $this->updatedIdNivelEstudios($this->id_nivel_estudios);
-        $this->updatedIdCarrera($this->id_carrera);
+        if((string) $this->id_nivel_estudios === '5'){
+            $this->updatedIdCarrera($this->id_carrera);
+        }
         $this->updatedIdOtrosEstudios($this->id_otros_estudios);
     }
     /*
@@ -63,6 +76,7 @@ class CurriculumDatosAcademicos extends Component
     public function updatedIdNivelEstudios($value)
     {
         $this->mostrar_carrera = false;
+        $this->mostrar_otra_carrera = false;
         $this->mostrar_estatus_nivel_estudios = false;
         $this->mostrar_otros_estudios = false;
         $this->mostrar_posgrado = false;
@@ -71,8 +85,10 @@ class CurriculumDatosAcademicos extends Component
         // Nivel 4
         if($value == 4){
 
-            $this->mostrar_carrera = true;
+            // Bachillerato no utiliza el catálogo de carreras.
+            $this->mostrar_otra_carrera = true;
             $this->mostrar_estatus_nivel_estudios = true;
+            $this->id_carrera = null;
 
             // Ocultar posgrado
             $this->mostrar_posgrado = false;
@@ -93,7 +109,13 @@ class CurriculumDatosAcademicos extends Component
 
         if(!$this->mostrar_carrera){
             $this->id_carrera = null;
-            $this->otra_carrera = null;
+
+            if(!$this->mostrar_otra_carrera){
+                $this->otra_carrera = null;
+            }
+        }
+
+        if(!$this->mostrar_estatus_nivel_estudios){
             $this->id_status_nivel_estudios = null;
         }
 
@@ -117,6 +139,10 @@ class CurriculumDatosAcademicos extends Component
     */
     public function updatedIdCarrera($value)
     {
+        if((string) $this->id_nivel_estudios !== '5'){
+            return;
+        }
+
         $this->mostrar_otra_carrera = false;
         if($value == 9){
             $this->mostrar_otra_carrera = true;
@@ -162,6 +188,22 @@ class CurriculumDatosAcademicos extends Component
     }
     public function storeDatosAcademicos()
     {
+        if((string) $this->id_nivel_estudios === '4'){
+            $this->id_carrera = null;
+        }
+
+        if(
+            (string) $this->id_nivel_estudios !== '4' &&
+            !(
+                (string) $this->id_nivel_estudios === '5' &&
+                (string) $this->id_carrera === '9'
+            )
+        ){
+            $this->otra_carrera = null;
+        }
+
+        $this->otra_carrera = trim((string) ($this->otra_carrera ?? '')) ?: null;
+
         $this->validate();
         DB::beginTransaction();
         try {

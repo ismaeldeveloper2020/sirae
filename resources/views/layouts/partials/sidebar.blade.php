@@ -27,7 +27,7 @@
                     <a href="{{ route('dashboard') }}"
                        class="nav-link">
 
-                        <i class="nav-icon fas fa-home"></i>
+                        <i class="nav-icon fa-solid fa-house"></i>
 
                         <p>
                             Dashboard
@@ -48,7 +48,7 @@
                     <a href="{{ route('admin.users') }}"
                        class="nav-link">
 
-                        <i class="nav-icon fas fa-users"></i>
+                        <i class="nav-icon fa-solid fa-users"></i>
 
                         <p>
                             Usuarios
@@ -63,7 +63,7 @@
                     <a href="{{ route('admin.roles') }}"
                        class="nav-link">
 
-                        <i class="nav-icon fas fa-user-shield"></i>
+                        <i class="nav-icon fa-solid fa-user-shield"></i>
 
                         <p>
                             Roles
@@ -78,7 +78,7 @@
                     <a href="{{ route('admin.organizaciones') }}"
                        class="nav-link">
 
-                        <i class="nav-icon fas fa-building"></i>
+                        <i class="nav-icon fa-solid fa-building"></i>
 
                         <p>
                             Organizaciones
